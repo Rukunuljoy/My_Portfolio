@@ -11,7 +11,13 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 export default function Hero() {
   return (
     <div className="py-32 md:py-48 relative z-0 overflow-x-clip">
-    <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom, black, black_70%, transparent_100%)]">
+    <div
+  className="absolute inset-0"
+  style={{
+    maskImage: "linear-gradient(to bottom, black, black 70%, transparent 100%)",
+    WebkitMaskImage: "linear-gradient(to bottom, black, black 70%, transparent 100%)", // For WebKit browsers
+  }}
+>
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${BackgroundImg.src})` }}
