@@ -107,7 +107,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                     >
                       <button className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 cursor-pointer px-6">
-                        <span>Visit Live Project</span>
+                        <span>Live Project</span>
                         <BsArrowUpRight className="size-4" />
                       </button>
                     </a>
