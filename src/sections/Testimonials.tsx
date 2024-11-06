@@ -51,7 +51,7 @@ const Testimonials = () => {
 >
         <div className="flex gap-8 flex-none">
         {testimonials.map((testimonial, i) => (
-          <Card key={i} className="max-w-xs md:p-8">
+          <Card key={i} className="max-w-xs md:p-8 md:max-w-md p-6">
             <div className="flex gap-4">
                 <div className="inline-flex rounded-full items-center justify-center">
               <Image
