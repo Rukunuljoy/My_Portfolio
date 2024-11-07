@@ -27,35 +27,50 @@ export default function Hero() {
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
-        <HeroOrbit size={800} rotation={-72}>
-          <StarIcon className="size-24 text-emerald-300 " />
-        </HeroOrbit>
-        <HeroOrbit size={550} rotation={20}>
-          <StarIcon className="size-12 text-emerald-300 " />
-        </HeroOrbit>
-        <HeroOrbit size={590} rotation={98}>
-          <StarIcon className="size-8 text-emerald-300 " />
+        <HeroOrbit size={650} rotation={-5}>
+          <div className="size-2 rounded-full bg-emerald-300/20 " />
         </HeroOrbit>
         <HeroOrbit size={430} rotation={-14}>
           <SparkleIcon className="size-8 text-emerald-300/20 " />
         </HeroOrbit>
-        <HeroOrbit size={440} rotation={79}>
-          <SparkleIcon className="size-5 text-emerald-300/20 " />
+        <HeroOrbit size={610} rotation={-17}>
+          <SparkleIcon className="size-10 animate-spin [animation-duration:10s] text-emerald-300/20 " />
         </HeroOrbit>
-        <HeroOrbit size={530} rotation={178}>
-          <SparkleIcon className="size-5 text-emerald-300/20 " />
-        </HeroOrbit>
-        <HeroOrbit size={710} rotation={148}>
-          <SparkleIcon className="size-14 text-emerald-300/20 " />
-        </HeroOrbit>
-        <HeroOrbit size={720} rotation={86}>
-          <div className="size-3 rounded-full bg-emerald-300/20 " />
+        <HeroOrbit size={750} rotation={-42}>
+          <StarIcon className="size-12 animate-spin [animation-duration:10s] text-emerald-300/30 " />
         </HeroOrbit>
         <HeroOrbit size={520} rotation={-41}>
           <div className="size-2 rounded-full bg-emerald-300/20 " />
         </HeroOrbit>
-        <HeroOrbit size={650} rotation={-5}>
-          <div className="size-2 rounded-full bg-emerald-300/20 " />
+        <HeroOrbit size={800} rotation={-72}>
+          <StarIcon className="size-24 animate-spin [animation-duration:10s] text-emerald-300 " />
+        </HeroOrbit>
+        <HeroOrbit size={550} rotation={20}>
+          <StarIcon className="size-12 animate-spin [animation-duration:10s] text-emerald-300 " />
+        </HeroOrbit>
+        <HeroOrbit size={590} rotation={98}>
+          <StarIcon className="size-8 animate-spin text-emerald-300 " />
+        </HeroOrbit>
+        <HeroOrbit size={730} rotation={10}>
+          <StarIcon className="size-8 animate-spin [animation-duration:10s] text-emerald-300 " />
+        </HeroOrbit>
+        <HeroOrbit size={690} rotation={120}>
+          <StarIcon className="size-10 animate-spin [animation-duration:10s] text-emerald-300 " />
+        </HeroOrbit>
+        <HeroOrbit size={440} rotation={79}>
+          <SparkleIcon className="size-5 animate-spin [animation-duration:10s] text-emerald-300/20 " />
+        </HeroOrbit>
+        <HeroOrbit size={530} rotation={178}>
+          <SparkleIcon className="size-5 text-emerald-300/20 " />
+        </HeroOrbit>
+        <HeroOrbit size={730} rotation={185}>
+          <SparkleIcon className="size-6 text-emerald-300/30 " />
+        </HeroOrbit>
+        <HeroOrbit size={710} rotation={148}>
+          <SparkleIcon className="size-14 animate-spin [animation-duration:10s] text-emerald-300/20 " />
+        </HeroOrbit>
+        <HeroOrbit size={720} rotation={86}>
+          <div className="size-3 rounded-full bg-emerald-300/20 " />
         </HeroOrbit>
       </div>
       <div className="container">
@@ -65,8 +80,10 @@ export default function Hero() {
             className="w-48 h-48 rounded-full object-cover border-2 border-blue-900"
             alt="Rukunul Joy"
           />
-          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-2">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
+          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-2 rounded-lg">
+            <div className=" bg-green-500 size-2.5 rounded-full relative">
+              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
+            </div>
             <div className="text-sm font-semibold">
               Available for new project
             </div>

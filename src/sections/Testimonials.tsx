@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { Fragment } from "react";
 import JhankarBhai from "@/assets/images/download (1).jpeg";
 import JabedBhai from "@/assets/images/1710335960217.jpeg";
 import RakibulBhai from "@/assets/images/1686227783555.jpeg";
@@ -43,15 +43,17 @@ const Testimonials = () => {
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nemo animi temporibus officia pariatur neque! Eius nemo animi temporibus officia pariatur neque!"
       />
      <div
-  className="mt-16 md:mt-20 flex overflow-x-clip"
+  className="mt-12 md:mt-16 flex overflow-x-clip py-4 -my-4"
   style={{
     maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
     WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)"
   }}
 >
-        <div className="flex gap-8 flex-none">
-        {testimonials.map((testimonial, i) => (
-          <Card key={i} className="max-w-xs md:p-8 md:max-w-md p-6">
+        <div className="flex gap-8 flex-none pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]">
+        {[...new Array(2)].fill(0).map((_, idx) =>(
+          <Fragment key={idx}>
+             {testimonials.map((testimonial, i) => (
+          <Card key={i} className="max-w-xs md:p-8 md:max-w-md p-6 hover:-rotate-3 transition duration-300">
             <div className="flex gap-4">
                 <div className="inline-flex rounded-full items-center justify-center">
               <Image
@@ -70,7 +72,11 @@ const Testimonials = () => {
             <p className="mt-4 md:mt-6 text-sm">{testimonial.Text}</p>
           </Card>
         ))}
+          </Fragment>
+        ))
+      }
         </div>
+       
       </div>
     </div>
   );

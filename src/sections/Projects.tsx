@@ -51,11 +51,26 @@ const projectDetails = [
     liveCode: "https://food-ordering-client-two.vercel.app/",
     githubFrontend: "https://github.com/",
   },
+  {
+    private_project: "Myself",
+    year: 2024,
+    Name: "Food delivery system",
+    image: "https://i.ibb.co/Cnctk9s/Screenshot-5.png",
+    result: [
+      {
+        title: "The gradient direction is to bottom.",
+      },
+      { title: "The gradient direction is to bottom." },
+      { title: "The gradient direction is to bottom." },
+    ],
+    liveCode: "https://food-ordering-client-two.vercel.app/",
+    githubFrontend: "https://github.com/",
+  },
 ];
 
 export default function Projects() {
   return (
-    <section className="pb-16 md:py-24">
+    <section className="pb-16">
       <div className="container">
         <SectionHeader
           eyebrow="Real-World Results"
@@ -69,7 +84,10 @@ export default function Projects() {
           {projectDetails.map((project, i) => (
             <Card
               key={i}
-              className="md:pt-16 pb-0 md:px-20 px-8 pt-8 "
+              className="md:pt-16 pb-0 md:px-20 px-8 pt-8 sticky"
+              style={{
+                  top:`calc(64px + ${i * 40}px)`
+              }}
             >
               <div className="md:grid md:grid-cols-2 md:gap-16">
                 <div className="">

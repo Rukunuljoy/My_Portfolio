@@ -1,6 +1,7 @@
+"use client"
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import React from "react";
+import React, { Fragment, useRef } from "react";
 import BookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import html from "@/assets/technologies/html.png";
@@ -28,6 +29,7 @@ import Exercise from "@/assets/icons/Exercise.jpeg";
 import MapImage from "@/assets/images/map.png";
 import Smilemimoji from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
+import {motion} from 'framer-motion';
 
 const toolboxItems = [
   {
@@ -138,6 +140,7 @@ const hobbies = [
 ];
 
 export default function About() {
+  const constraintRef = useRef(null);
   return (
     <div className="py-20 md:py-24">
       <div className="container">
@@ -164,14 +167,16 @@ export default function About() {
                 digital experience."
             />
             <div
-              className="flex"
+              className="flex "
               style={{
                 maskImage:
-                  "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                  "linear-gradient(to right, transparent, black 10%, black 90%, transparent)  " ,
               }}
             >
-              <div className="flex flex-none gap-6">
-                {toolboxItems.map((item, i) => (
+              <div className="flex flex-none gap-6 animate-move-left [animation-duration:60s]">
+              {[...new Array(2)].fill(0).map((_, idx) =>(
+                <Fragment key={idx}>
+                    {toolboxItems.map((item, i) => (
                   <div
                     key={i}
                     className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg border-t border-b border-gray-200"
@@ -185,17 +190,22 @@ export default function About() {
                     <span className="font-semibold text-lg">{item.title}</span>
                   </div>
                 ))}
+                </Fragment>
+              ))}
+              
               </div>
             </div>
             <div
-              className="flex mt-6"
+              className="flex mt-6 "
               style={{
                 maskImage:
                   "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
               }}
             >
-              <div className="flex flex-none gap-6">
-                {toolboxItems.map((item, i) => (
+              <div className="flex flex-none gap-6 animate-move-right [animation-duration:60s]">
+              {[...new Array(2)].fill(0).map((_, idx) =>(
+                <Fragment key={idx}>
+                    {toolboxItems.map((item, i) => (
                   <div
                     key={i}
                     className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg border-t border-b border-gray-200"
@@ -209,6 +219,9 @@ export default function About() {
                     <span className="font-semibold text-lg">{item.title}</span>
                   </div>
                 ))}
+                </Fragment>
+              ))}
+              
               </div>
             </div>
           </Card>
@@ -217,12 +230,15 @@ export default function About() {
               title="Beyond the code"
               desc="Explore my interests and hobbies beyond the digital realm"
             />
-            <div className="relative flex-1">
+            <div className="relative flex-1" ref={constraintRef}>
               {hobbies.map((hobby, i) => (
-                <div key={i} className="inline-flex gap-2 px-3 bg-gradient-to-r from-emerald-300 to bg-sky-400 rounded-full py-1.5 items-center justify-center absolute" style={{
+                <motion.div key={i} className="inline-flex gap-2 px-3 bg-gradient-to-r from-emerald-300 to bg-sky-400 rounded-full py-1.5 items-center justify-center absolute" style={{
                   left:hobby.left,
                   top:hobby.top,
-                }}>
+                }} 
+                drag
+                dragConstraints={constraintRef}
+                >
                   <span className="font-medium text-gray-950">{hobby.title}</span>
                   <Image
                     src={hobby.emoji}
@@ -231,13 +247,15 @@ export default function About() {
                     width={25}
                     className="rounded-full"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </Card>
           <Card className="h-[320px] p-0 md:col-span-2">
             <Image src={MapImage} alt="map" className="h-full w-full object-cover"/>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-300 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-300 -z-20 animate-ping [animation-duration:2s]"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-300 -z-10"></div>
             <Image src={Smilemimoji} alt="smiling memoji" className="size-20"/>
             </div>
           </Card>
