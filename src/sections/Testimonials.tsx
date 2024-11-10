@@ -11,25 +11,25 @@ const testimonials = [
   {
     name: "Jhankar Mahmub",
     position: " Web development instructor",
-    Text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi dignissimos doloremque fuga amet id veritatis soluta modi dicta debitis architecto.",
+    Text: "Rukunul, always keep learning and exploring new things in technology. Build connections with others to learn from them and find new opportunities. Lastly, always ask for feedback so you can improve and grow.",
     avator: JhankarBhai,
   },
   {
     name: "Abu sadek Jabed",
     position: "General manager in sales department",
-    Text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi dignissimos doloremque fuga amet id veritatis soluta modi dicta debitis architecto.",
+    Text: "Rukunul, you have great potential. Keep pushing yourself to learn and grow. Never shy away from challenges—embrace them, Remember to maintain a balance between work and personal life, as both are important for long-term success.",
     avator: JabedBhai,
   },
   {
     name: "Rakibul Islam",
     position: "Software Engineer",
-    Text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi dignissimos doloremque fuga amet id veritatis soluta modi dicta debitis architecto.",
+    Text: "Rukunul Joy is an experienced, talented MERN Stack Developer, but more than that he understands where web development sits within the whole scheme of a company or project, he would be a good choose as your employee.",
     avator: RakibulBhai,
   },
   {
     name: "Rokeya Sultana",
     position: " Web development instructor",
-    Text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi dignissimos doloremque fuga amet id veritatis soluta modi dicta debitis architecto.",
+    Text: "Rukunul is one of the most dedicated and skilled full stack web developer I have ever met.Rukunul has impressive technical skills in full stack web development is top-notch, and he is always up-to-date with the latest web development trends and technologies.",
     avator: RabeyaApu,
   },
 ];
@@ -40,7 +40,7 @@ const Testimonials = () => {
       <SectionHeader
         eyebrow="Happy Clients"
         title="What colleague says about me"
-        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nemo animi temporibus officia pariatur neque! Eius nemo animi temporibus officia pariatur neque!"
+        desc="Always give people more than what they expect to get.There is a big difference between a satisfied customer and a loyal customer."
       />
      <div
   className="mt-12 md:mt-16 flex overflow-x-clip py-4 -my-4"

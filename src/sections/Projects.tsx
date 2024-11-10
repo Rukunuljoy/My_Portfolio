@@ -13,64 +13,89 @@ const projectDetails = [
     image: "https://i.ibb.co/Cnctk9s/Screenshot-5.png",
     result: [
       {
-        title: "The gradient direction is to bottom.",
+        title:
+          "Full stack developer with experience in React, Next.js, Node.js, Express.js, and MongoDB.",
       },
-      { title: "The gradient direction is to bottom." },
-      { title: "The gradient direction is to bottom." },
+      {
+        title:
+          "Completed a food delivery system with features like user authentication, modern UI, product filtering, and payment integration.",
+      },
+      {
+        title:
+          "Quick learner and hard worker, always ready to tackle new challenges and expand my skills.",
+      },
     ],
     liveCode: "https://food-ordering-client-two.vercel.app/",
-    githubFrontend: "https://github.com/",
+    githubFrontend: "https://github.com/Rukunuljoy/Food-ordering-client",
   },
   {
     private_project: "Myself",
     year: 2024,
-    Name: "Food delivery system",
-    image: "https://i.ibb.co/Cnctk9s/Screenshot-5.png",
+    Name: "Event management system system",
+    image: "https://i.ibb.co.com/tLRmmDZ/Screenshot-6.png",
     result: [
       {
-        title: "The gradient direction is to bottom.",
+        title:
+          "Full stack developer with hands-on experience in building an event management system, implementing event creation, scheduling, and user notifications.",
       },
-      { title: "The gradient direction is to bottom." },
-      { title: "The gradient direction is to bottom." },
+      {
+        title:
+          "Focused on delivering efficient, scalable applications with MongoDB and Node.js as the backend.",
+      },
+      {
+        title:
+          "Known for rapid learning and dedication to creating impactful user experiences.",
+      },
     ],
-    liveCode: "https://food-ordering-client-two.vercel.app/",
-    githubFrontend: "https://github.com/",
+    liveCode: "https://event-app-pi.vercel.app/",
+    githubFrontend: "https://github.com/hafizuddinraju/event-app",
   },
   {
     private_project: "Myself",
     year: 2024,
-    Name: "Food delivery system",
-    image: "https://i.ibb.co/Cnctk9s/Screenshot-5.png",
+    Name: "Donation management system",
+    image: "https://i.ibb.co.com/qrKYhnc/Screenshot-1.png",
     result: [
       {
-        title: "The gradient direction is to bottom.",
+        title:
+          "Developed a complete donation management system, featuring tools for tracking donations, managing donor information, and generating reports.",
       },
-      { title: "The gradient direction is to bottom." },
-      { title: "The gradient direction is to bottom." },
+      {
+        title:
+          "Skilled in React and Next.js for creating intuitive interfaces and Node.js for efficient backend processing.",
+      },
+      {
+        title:
+          "Quick learner committed to building reliable applications that make a difference.",
+      },
     ],
-    liveCode: "https://food-ordering-client-two.vercel.app/",
-    githubFrontend: "https://github.com/",
+    liveCode: "https://donation-charity-28c41.web.app/",
+    githubFrontend: "https://github.com/Rukunuljoy/Charity-donation",
   },
   {
     private_project: "Myself",
     year: 2024,
-    Name: "Food delivery system",
-    image: "https://i.ibb.co/Cnctk9s/Screenshot-5.png",
+    Name: "Food Restaurant",
+    image: "https://i.ibb.co.com/4phc85T/Screenshot-2.png",
     result: [
       {
-        title: "The gradient direction is to bottom.",
+        title:
+          "Built a food restaurant app with menu management, order processing, and secure payments.",
       },
-      { title: "The gradient direction is to bottom." },
-      { title: "The gradient direction is to bottom." },
+      {
+        title:
+          "Skilled in React and Node.js for smooth, user-friendly experiences.",
+      },
+      { title: "Dedicated to learning and improving user-centered solutions." },
     ],
-    liveCode: "https://food-ordering-client-two.vercel.app/",
-    githubFrontend: "https://github.com/",
+    liveCode: "https://food-service-169ea.web.app/",
+    githubFrontend: "https://github.com/Rukunuljoy/resaller_bike",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="pb-16">
+    <section id="project" className="pb-16">
       <div className="container">
         <SectionHeader
           eyebrow="Real-World Results"
@@ -86,7 +111,7 @@ export default function Projects() {
               key={i}
               className="md:pt-16 pb-0 md:px-20 px-8 pt-8 sticky"
               style={{
-                  top:`calc(64px + ${i * 40}px)`
+                top: `calc(64px + ${i * 40}px)`,
               }}
             >
               <div className="md:grid md:grid-cols-2 md:gap-16">

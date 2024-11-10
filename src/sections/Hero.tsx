@@ -9,15 +9,28 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export default function Hero() {
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
   return (
     <div className="py-32 md:py-48 relative z-0 overflow-x-clip">
-    <div
-  className="absolute inset-0"
-  style={{
-    maskImage: "linear-gradient(to bottom, black, black 70%, transparent 100%)",
-    WebkitMaskImage: "linear-gradient(to bottom, black, black 70%, transparent 100%)", // For WebKit browsers
-  }}
->
+      <div
+        className="absolute inset-0"
+        style={{
+          maskImage:
+            "linear-gradient(to bottom, black, black 70%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black, black 70%, transparent 100%)", // For WebKit browsers
+        }}
+      >
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${BackgroundImg.src})` }}
@@ -93,22 +106,32 @@ export default function Hero() {
           <h1 className="font-serif text-3xl text-center mt-8 tracking-wide">
             Full Stack Web developer
           </h1>
-          <p className="mt-4 text-center text-white/60">
-            I am a Front-End Developer with a passion for modern technologies. I
-            am basically a front-end developer using ReactJS and NextJs. At the
-            moment front-end development is my primary specialty.
+          <p className="mt-4 text-center text-white/60 bg-clip-text">
+            I am Rukunul Karim, a full stack developer skilled in Mern-Stac. As a quick learner and
+            hard worker, I enjoy building user-friendly applications that work
+            smoothly from front to back. I am always eager to learn new technologies and take on
+            challenges to grow as a developer.
           </p>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 rounded-xl px-6 h-12">
-            <span className="font-semibold">Explore my Work</span>
-            <BsArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white rounded-xl bg-white text-gray-900 h-12 px-6">
-            <span>👋</span>
-            <span className="font-semibold">Lets connect</span>
-          </button>
-        </div>
+      {/* Explore my Work button */}
+      <button
+        className="inline-flex items-center gap-2 border border-white/15 rounded-xl px-6 h-12 cursor-pointer"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection('project'); // Scroll to the Project section
+        }}
+      >
+        <span className="font-semibold">Explore my Work</span>
+        <BsArrowDown className="size-4" />
+      </button>
+
+      {/* Lets connect button */}
+      <button className="inline-flex items-center gap-2 border border-white rounded-xl bg-white text-gray-900 h-12 px-6 cursor-pointer">
+        <span>👋</span>
+        <span className="font-semibold">Lets connect</span>
+      </button>
+    </div>
       </div>
     </div>
   );
